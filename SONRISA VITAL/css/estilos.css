@@ -1,0 +1,374 @@
+/* --- Base y Reset Básico --- */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general para todo el texto */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+    background-color: #EAF4F4; /* Color de fondo muy suave para toda la página */
+    color: blue; /* Color de texto general */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+.container {
+    width: 90%; /* Ancho del contenido principal */
+    max-width: 1200px; /* Ancho máximo para pantallas muy grandes */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #28A745; /* Color azul para los títulos (puede ser tu color de marca) */
+    margin-bottom: 15px; /* Espacio debajo de los títulos */
+    text-align: center; /* Centra todos los títulos */
+}
+
+p {
+    margin-bottom: 10px; /* Espacio debajo de los párrafos */
+}
+
+a {
+    color: #007bff; /* Color de enlaces */
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya enlaces al pasar el ratón */
+}
+
+img {
+    max-width: 100%; /* Las imágenes no excederán el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen al redimensionar */
+    display: block; /* Para mejor control del espaciado y centrado */
+}
+
+/* --- Botones --- */
+.btn-cita, .btn-enviar {
+    display: inline-block; /* Permite que el botón tenga ancho y alto, y sea interactivo */
+    background-color: #28a745; /* Color de fondo verde para el botón de acción */
+    color: #fff; /* Color de texto blanco */
+    padding: 12px 25px; /* Relleno interno del botón */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+    border: none; /* Elimina el borde predeterminado del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+}
+
+.btn-cita:hover, .btn-enviar:hover {
+    background-color: #218838; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+/* --- Encabezado (Header) --- */
+header {
+    background-color: #fff; /* Fondo blanco para el encabezado */
+    padding: 10px 0; /* Relleno superior e inferior */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para darle profundidad */
+}
+
+header .container {
+    display: flex; /* Utiliza Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacia el logo y la navegación */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px; /* Tamaño del logo */
+    margin-right: 15px; /* Espacio entre el logo y el texto "Sonrisa Vital" */
+}
+
+.logo h1 {
+    margin: 0; /* Elimina el margen predeterminado de h1 dentro del logo */
+    font-size: 2em; /* Tamaño de fuente del título del logo */
+    color: #007bff; /* Color del título del logo */
+}
+
+header nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los elementos de navegación horizontalmente */
+}
+
+header nav ul li {
+    margin-left: 25px; /* Espacio entre cada elemento del menú */
+}
+
+header nav ul li a {
+    color: #555; /* Color de texto de los enlaces de navegación */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+header nav ul li a:hover {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+}
+
+/* --- Sección Hero (Principal) --- */
+.hero {
+    background-image: url('../img/hero-background.jpg'); /* Imagen de fondo para la sección hero */
+    background-size: cover; /* La imagen cubre todo el área */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #28A745; /* Texto blanco sobre la imagen de fondo */
+    text-align: center; /* Centra el texto */
+    padding: 100px 20px; /* Relleno superior e inferior */
+    height: 50vh; /* Altura del 50% de la altura de la ventana (viewport height) */
+    display: flex; /* Para centrar contenido verticalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+.hero h2 {
+    font-size: 3em; /* Tamaño de fuente grande para el título hero */
+    margin-bottom: 20px;
+    color: #28A745; /* Color blanco para el título del hero */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para que el texto resalte */
+}
+
+.hero p {
+    font-size: 1.2em; /* Tamaño de fuente para el párrafo */
+    margin-bottom: 30px;
+    max-width: 800px; /* Limita el ancho del párrafo para mejor lectura */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para que el texto resalte */
+}
+
+/* --- Sección Servicios --- */
+.services {
+    padding: 60px 0; /* Espaciado superior e inferior */
+    background-color: #fff; /* Fondo blanco */
+    text-align: center;
+}
+
+.service-grid {
+    display: grid; /* Utiliza Grid para organizar los servicios */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre las columnas/filas */
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Efecto hover */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Se eleva ligeramente al pasar el ratón */
+}
+
+.service-item img {
+    height: 120px; /* Altura fija para las imágenes de servicio */
+    width: 100%; /* Ajusta el ancho al 100% de su contenedor */
+    object-fit: cover; /* Cubre el área manteniendo proporciones */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    margin-bottom: 15px;
+}
+
+.service-item h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* --- Sección Nosotros --- */
+.about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex; /* Utiliza Flexbox para la imagen y el texto */
+    flex-direction: column; /* Por defecto, en columna */
+    align-items: center; /* Centra los ítems */
+    margin-top: 40px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo para la imagen "nosotros" */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px; /* Espacio debajo de la imagen */
+}
+
+.about-content p {
+    text-align: justify; /* Justifica el texto para mejor lectura */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto 15px auto; /* Centra el párrafo */
+}
+
+/* --- Sección Galería --- */
+.gallery {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px; /* Altura fija para las imágenes de la galería */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* --- Sección Contacto --- */
+.contact {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px; /* Limita el ancho del formulario */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left; /* Alinea el texto del formulario a la izquierda */
+}
+
+.contact form label {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form input[type="tel"],
+.contact form textarea {
+    width: calc(100% - 20px); /* Ancho completo menos el padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact form textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.contact .btn-enviar {
+    width: 100%; /* El botón ocupa todo el ancho del formulario */
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex; /* Para alinear íconos y texto */
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    color: #007bff; /* Color del ícono */
+    font-size: 1.3em;
+}
+/* Asegúrate de incluir la biblioteca Font Awesome en tu HTML si usas 'i' */
+/* Por ejemplo, en <head>: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    background-color: #333; /* Fondo oscuro para el pie de página */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Espacio por encima del footer */
+}
+
+footer .social-links {
+    margin-top: 15px;
+}
+
+footer .social-links a {
+    display: inline-block; /* Para que los iconos estén en línea */
+    margin: 0 10px; /* Espacio entre los iconos */
+}
+
+footer .social-links img {
+    height: 30px; /* Tamaño de los iconos de redes sociales */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+
+/* --- Responsive Design (Adaptación a Dispositivos Móviles) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Apila el logo y la navegación en columnas */
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Apila los elementos del menú */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Espacio vertical entre elementos del menú */
+    }
+
+    .hero {
+        padding: 60px 20px; /* Menos padding en móviles */
+    }
+
+    .hero h2 {
+        font-size: 2em; /* Título más pequeño en móviles */
+    }
+
+    .service-grid, .gallery-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+
+    .about-content {
+        flex-direction: column; /* Asegura que se apile la imagen y el texto */
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+}
